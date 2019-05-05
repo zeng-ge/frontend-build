@@ -1,0 +1,16 @@
+{
+  "name": "eslint",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "zengge <gzeng@thoughtworks.com>",
+  "homepage": "https://github.com/zeng-ge/frontend-build#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeng-ge/frontend-build.git"
+  },
+  "scripts": {
+    
+  }
+}
