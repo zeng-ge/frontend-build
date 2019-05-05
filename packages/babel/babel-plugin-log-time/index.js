@@ -3,31 +3,45 @@ module.exports = function({types}) {
     visitor: {
       ArrowFunctionExpression(path){
         const body = path.get('body')
-        body.unshiftContainer('body', types.expressionStatement(
-            types.callExpression(
-                types.memberExpression(types.identifier('console'), types.identifier('log')),
-                [
-                    types.newExpression(
-                        types.identifier('Date'),
-                        []
-                    )
-                ]
+        var beginDate = types.variableDeclaration('const', [
+            types.variableDeclarator(
+                types.identifier('beginDate'),
+                types.newExpression(
+                    types.identifier('Date'),
+                    []
+                )
             )
-        ));
-        
-        body.pushContainer('body', types.expressionStatement(
+        ]);
+
+        const endDate = types.variableDeclaration('const', [
+            types.variableDeclarator(
+                types.identifier('endDate'),
+                types.newExpression(
+                    types.identifier('Date'),
+                    []
+                )
+            )
+        ])
+
+        const log = types.expressionStatement(
             types.callExpression(
                 types.memberExpression(
                     types.identifier('console'), types.identifier('log')
                 ),
                 [
-                    types.newExpression(
-                        types.identifier('Date'),
-                        []
+                    types.binaryExpression(
+                        '-', 
+                        types.identifier('endDate'),
+                        types.identifier('startDate')
                     )
                 ]
             )
-        ));  
+        )
+
+        body.unshiftContainer('body', beginDate);
+        body.pushContainer('body', endDate);
+        body.pushContainer('body', );
+        
       }
     }
   }

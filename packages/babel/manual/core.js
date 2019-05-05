@@ -55,12 +55,12 @@ const tpl = `
  */
 
 const result = babel.transformSync(tpl, {
-    presets: [require('@babel/preset-env')],
+    presets: [],//require('@babel/preset-env')
     plugins: [
         require("babel-plugin-log-time"),
         {
             visitor: {
-                ArrowFunctionExpression(path){
+                ArrowFunctionExpression(path){                    
                     path.arrowFunctionToExpression()
                 }
             }
