@@ -13,7 +13,8 @@
   "scripts": {
     "babel": "babel",
     "plugins": "babel src/log.js --out-dir build --plugins=@babel/plugin-transform-arrow-functions",
-    "presets": "babel src --out-dir build --presets=@babel/preset-env --plugins=@babel/plugin-proposal-class-properties"
+    "presets": "babel src --out-dir build --presets=@babel/preset-env --plugins=@babel/plugin-proposal-class-properties",
+    "customize-preset": "babel src --out-dir build --presets=@babel/preset-env,babel-preset-my-stage-0"
   },
   "dependencies": {
     "@babel/cli": "^7.4.4",
@@ -42,6 +43,8 @@
     "@babel/preset-stage-1": "^7.0.0",
     "@babel/traverse": "^7.4.4",
     "@babel/types": "^7.4.4",
+    "babel-plugin-log-time": "./babel-plugin-log-time",
+    "babel-preset-my-stage-0": "./babel-preset-my-stage-0",
     "core-js": "^3.0.1"
   }
 }
