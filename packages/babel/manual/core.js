@@ -60,7 +60,7 @@ const result = babel.transformSync(tpl, {
         require("babel-plugin-log-time"),
         {
             visitor: {
-                ArrowFunctionExpression(path){                    
+                ArrowFunctionExpression(path){
                     path.arrowFunctionToExpression()
                 }
             }

@@ -30,7 +30,7 @@ module.exports = function({types}) {
                 ),
                 [
                     types.binaryExpression(
-                        '-', 
+                        '-',
                         types.identifier('endDate'),
                         types.identifier('startDate')
                     )
@@ -40,8 +40,8 @@ module.exports = function({types}) {
 
         body.unshiftContainer('body', beginDate);
         body.pushContainer('body', endDate);
-        body.pushContainer('body', );
-        
+        body.pushContainer('body', log);
+
       }
     }
   }
