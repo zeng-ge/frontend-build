@@ -1,11 +1,9 @@
 module.exports = {
+  root: true,
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 6,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true
-    }
+    sourceType: 'module'
   },
   extends: [
     'standard'
@@ -17,7 +15,8 @@ module.exports = {
     node: true,
     browser: true,
     jest: true,
-    jquery: true
+    jquery: true,
+    es6: true
   },
   globals: {
     window: 'off'

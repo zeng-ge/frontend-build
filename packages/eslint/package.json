@@ -11,7 +11,8 @@
     "url": "git+https://github.com/zeng-ge/frontend-build.git"
   },
   "scripts": {
-    "eslint": "eslint index.js"
+    "eslint": "eslint --ext js ./",
+    "eslint:fix": "eslint --ext js --fix ./"
   },
   "dependencies": {
     "babel-eslint": "^10.0.1",
@@ -21,5 +22,34 @@
     "eslint-plugin-node": "^9.0.1",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "extends": [
+      "standard"
+    ],
+    "plugins": [
+      "standard"
+    ],
+    "env": {
+      "node": true,
+      "browser": true,
+      "jest": true,
+      "jquery": true,
+      "es6": true
+    },
+    "globals": {
+      "window": "off"
+    },
+    "rules": {
+      "no-console": ["error", { "allow": ["error"]}],
+      "semi": ["error", "never"],
+      "quotes": ["error", "single"],
+      "no-undef": "error"
+    }
   }
 }
