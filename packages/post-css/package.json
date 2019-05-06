@@ -2,5 +2,9 @@
   "name": "post-css",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^9.5.1",
+    "postcss": "^7.0.16"
+  }
 }
