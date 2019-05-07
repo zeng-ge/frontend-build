@@ -38,6 +38,18 @@ const css = `
     flex: 1;
   }
 `
+
+const autoprefixer = require('autoprefixer')({
+  browsers: [
+    'last 5 versions',//支持最新的5个版本
+    'not ie <= 8',//IE8以下不支持
+  ]
+})
+
+postcss(autoprefixer).process(css).then(result => {
+  console.log(result.css)
+})
+
 postcss([flexPlugin]).process(css).then(result => {
   console.log(result.css)
 })
